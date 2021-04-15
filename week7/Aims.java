@@ -1,3 +1,9 @@
+<<<<<<< Updated upstream:week5/Aims.java
+=======
+//import hust.soict.globalict.aims.media.Media;
+//import hust.soict.globalict.aims.media.Store;
+//import hust.soict.globalict.aims.media.Cart;
+>>>>>>> Stashed changes:week7/Aims.java
 import java.util.*; 
 public class Aims {
 
@@ -35,6 +41,12 @@ public class Aims {
         System.out.println("Please choose a number: 0-1-2-3-4");
     }
     public static void main (String[] args){
+        MemoryDeamon memmory1 = new MemoryDeamon();
+        Thread thread1 = new Thread(memmory1);
+        thread1.start();
+
+
+
         Store str = new Store();
         str = str.initalStore();
 
@@ -98,6 +110,28 @@ public class Aims {
             //////////////finish while
                 break;
             case 2:
+<<<<<<< Updated upstream:week5/Aims.java
+=======
+                //add and remove from store
+                System.out.println("1: add to store");
+                System.out.println("2: remove from store");
+                int tmp = sc.nextInt();
+                if (tmp == 1){
+                    System.out.println("input media");
+                    int idT = sc.nextInt();
+                    String titleT = sc.next();
+                    String categoryT = sc.next();
+                    int priceT = sc.nextInt();
+                    DigitalVideoDisc media1 = new DigitalVideoDisc(idT, titleT, categoryT, priceT);
+                    str.addMediaStore(media1);
+                    System.out.print("input sucessfully");
+                }
+                if (tmp == 2){
+                    System.out.println("input id to remove");
+                    int idT = sc.nextInt();
+                    str.removeMediaStore(idT);
+                }
+>>>>>>> Stashed changes:week7/Aims.java
                 break;
             case 3:
                 break;
@@ -107,5 +141,9 @@ public class Aims {
 ////////////////////////////////
         
         //System.out.println(anorder.totalCost());
+            memmory1.run();
     }
+
+
+
 }
