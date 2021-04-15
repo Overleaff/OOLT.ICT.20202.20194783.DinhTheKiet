@@ -1,9 +1,15 @@
+<<<<<<< Updated upstream:week7/Aims.java
 <<<<<<< Updated upstream:week5/Aims.java
 =======
 //import hust.soict.globalict.aims.media.Media;
 //import hust.soict.globalict.aims.media.Store;
 //import hust.soict.globalict.aims.media.Cart;
 >>>>>>> Stashed changes:week7/Aims.java
+=======
+//import hust.soict.globalict.aims.media.Media;
+//import hust.soict.globalict.aims.media.Store;
+//import hust.soict.globalict.aims.media.Cart;
+>>>>>>> Stashed changes:week6/Aims.java
 import java.util.*; 
 public class Aims {
 
