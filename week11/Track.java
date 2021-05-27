@@ -19,9 +19,22 @@ public class Track implements Playable{
         return "Title: "+ title +"  Length: "+length;
     }
 
-    public void play(){
-        System.out.println("Playing DVD: " + this.getTitle());
-        System.out.println("DVD length: " + this.getLength());
+    public void play() throws PlayerException{
+        if (this.getLength() > 0){
+            System.out.println("Playing DVD: " + this.getTitle());
+            System.out.println("DVD length: " + this.getLength());
+        }else{
+            throw new PlayerException("ERROR: dvd length is non- positive");
+        }
+    }
+
+    public static void main (String[] args){
+         Track dvd1 = new Track( "meomeo",-1);
+        try {
+            dvd1.play();
+        }catch(PlayerException e) {
+            System.err.print(e);
+        }
     }
     
 }

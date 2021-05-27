@@ -1,3 +1,3 @@
 public interface Playable {
-    public void play();
+    public abstract void play() throws PlayerException;
 }
