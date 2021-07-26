@@ -1,8 +1,8 @@
 import javax.swing.JOptionPane;
 
-public class swing{
+public class FirstDialog{
     public static void main(String[] args){
-		JOptionPane.showMessageDialog(null, "First dialog");
+		JOptionPane.showMessageDialog(null, "Hello World, how are you");
 		System.exit(0);
 	}
 }
