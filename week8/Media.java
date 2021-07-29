@@ -1,7 +1,8 @@
 //package hust.soict.globalict.aims.media;
-abstract class Media {
 
-
+import java.util.ArrayList;
+import java.util.Collections;
+public class Media implements Comparable<Media>{
     public int id;
     public String title;
     public String category;
@@ -9,17 +10,17 @@ abstract class Media {
 
     public static final int Max_number_media = 5;
     public static int nbMedia = 0;
-    public Media itemMedias[] = new Media[Max_number_media];
+    public static ArrayList<Media> itemMedias = new ArrayList<Media>();
 
 //////////////////////ACCESSOR
 
     public int getId(){
         return id;
     }
-/*
+
     public String getTitle(){
         return title;
-    }
+    }/*
     public String getCategory(){
         return category;
     }
@@ -58,7 +59,15 @@ abstract class Media {
         return "id: "+ id +", title: " + title + ", category: "+ category +", cost: " + cost;
     }
 
+    public boolean equals(Object o){
+        Media tmp = (Media)o;
+        if (tmp.getId() == this.getId()) return true;
+        return false;
+    }
 
+    public int compareTo(Media med){
+        return this.getTitle().compareTo(med.getTitle());
+    }
 
     public static void main (String[] args){
 

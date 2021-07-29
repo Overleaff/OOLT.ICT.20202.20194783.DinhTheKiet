@@ -71,6 +71,10 @@ for (int i = 0; i < listTrack.size(); i++){
             listTrack.get(i).play();
         }
     }
+
+    public String toString(){
+        return "id: "+ id +", title: " + title + ", category: "+ category +", cost: " + cost +", artist" +artist;
+    }
     public static void main(String[] args){
         CompactDisc cDisc = new CompactDisc();
         cDisc.initalCDisc();

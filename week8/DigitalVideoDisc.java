@@ -19,6 +19,10 @@ public class DigitalVideoDisc extends Media implements Playable{
         System.out.println("DVD length: " + this.getCost());
     }
 
+    public String toString(){
+        return "id: "+ id +", title: " + title + ", category: "+ category +", cost: " + cost;
+    }
+
     public static void main(String[] args){
         DigitalVideoDisc dvd1 = new DigitalVideoDisc(1, "meomeo", "animation", 10);
         dvd1.play();
